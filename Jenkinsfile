@@ -15,6 +15,7 @@ pipeline{
 		    deleteDir()
                 sshagent(['ilijagithub']) {
                     sh """
+		    	git remote set-url origin git@github.com:panovski001/Pipelines.git
                         git checkout $tag
 		               """
                 }
