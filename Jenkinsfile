@@ -57,6 +57,7 @@ pipeline{
 		stage('Git Tag'){
             steps{
                 sh """
+		   git remote set-url origin git@github.com:panovski001/Pipelines.git
                    git tag -a $BUILD_TAG -m "$BUILD_TAG"
                    git push --tag
 		   """
