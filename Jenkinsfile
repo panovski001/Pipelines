@@ -12,7 +12,6 @@ pipeline{
     stages{
 		stage('Git Checkout from tag'){
             steps{
-		    deleteDir()
                 sshagent(['ilijagithub']) {
                     sh """
 		    	git remote set-url origin git@github.com:panovski001/Pipelines.git
