@@ -59,6 +59,7 @@ pipeline{
                 sh """
                    git tag -a $BUILD_TAG -m "$BUILD_TAG"
                    git push --tag
+		   """
             }
         }
     }
