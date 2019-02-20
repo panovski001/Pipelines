@@ -7,13 +7,15 @@ pipeline{
         prj_name_m = 'ilija_2'
         prj_location = 'Interworks-Partner/projects'
         operation = 'migrate'
-		organization = 'Interworks-Partner'
-		GITHUB = credentials('githubuserpass')
+	organization = 'Interworks-Partner'
+	GITHUB = credentials('githubuserpass')
     }
     stages{
-		stage('Git Checkout'){
+	stage('Git Checkout'){
             steps{
-               echo git checkout
+               sh """
+	          echo checkout
+		  """
             }
         }
         stage('Snaplogic Activity'){
