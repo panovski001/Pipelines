@@ -12,6 +12,7 @@ pipeline{
     stages{
 		stage('Git Checkout from tag'){
             steps{
+		    deleteDir()
                 sshagent(['ilijagithub']) {
                     sh """
                         git checkout $tag
